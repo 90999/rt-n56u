@@ -26,6 +26,7 @@ configure:
 	autoreconf -v; \
 	./configure \
 		--prefix=/usr \
+		--disable-harden \	
 		--disable-lastlog \
 		--disable-utmp \
 		--disable-utmpx \
@@ -37,7 +38,6 @@ configure:
 		--enable-zlib \
 		--enable-bundled-libtom \
 		--host=$(HOST_TARGET) \ 
-		--disable-harden \		
 		--build=$(HOST_BUILD) ; \
 	)
 
