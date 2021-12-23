@@ -36,7 +36,8 @@ configure:
 		--disable-pututxline \
 		--enable-zlib \
 		--enable-bundled-libtom \
-		--host=$(HOST_TARGET) \
+		--host=$(HOST_TARGET) \ 
+		--disable-harden \		
 		--build=$(HOST_BUILD) ; \
 	)
 
