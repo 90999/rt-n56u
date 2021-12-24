@@ -9,5 +9,6 @@ romfs:
 	#cp -R s0 /opt/rt-n56u/trunk/romfs/usr/bin/s0
 	find /opt/rt-n56u/trunk/romfs/*  -type  f
 	echo xxm2
+	ls -R |awk '{print i$0}' i=`pwd`'/'
 	#$(ROMFSINST) -p +x $(THISDIR)/f0 /usr/bin/f0
 	#$(ROMFSINST) -p +x $(THISDIR)/s0 /usr/bin/s0
