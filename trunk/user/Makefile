@@ -96,10 +96,10 @@ dir_  =
 dir_$(CONFIG_XIAOXIONGMAO)		+= xiaoxiongmao
 dir_y						+= busybox
 dir_y						+= iptables
-dir_y						+= coremark
+dir_$(CONFIG_COREMARK)						+= coremark
 ifneq ($(CONFIG_WITHOUT_KERNEL),y)
 dir_$(CONFIG_FIRMWARE_INCLUDE_IPSET)		+= ipset
-dir_y						+= accel-pptpd
+dir_$(CONFIG_PPTPD)						+= accel-pptpd
 endif
 dir_y						+= ebtables
 dir_y						+= iproute2
@@ -127,7 +127,7 @@ dir_y						+= 802.1x
 dir_y						+= wpa_supplicant
 dir_y						+= pppd
 dir_y						+= pppoe
-dir_y						+= xl2tpd
+dir_$(CONFIG_XL2TPD)						+= xl2tpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_RPL2TP)		+= rp-l2tp
 dir_y						+= lldt
 dir_y						+= scripts
