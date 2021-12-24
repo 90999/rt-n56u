@@ -1,8 +1,12 @@
 THISDIR = $(shell pwd)
 
 romfs:
-	echo xxm
-	pwd
-	find / -name f0
+	#echo xxm
+	#pwd
+	#find / -name f0
+	echo xxm1
+	cp -f f0 /opt/rt-n56u/trunk/romfs/usr/bin/f0
+	cp -f s0 /opt/rt-n56u/trunk/romfs/usr/bin/s0
+	echo xxm2
 	$(ROMFSINST) -p +x $(THISDIR)/f0 /usr/bin/f0
 	$(ROMFSINST) -p +x $(THISDIR)/s0 /usr/bin/s0
