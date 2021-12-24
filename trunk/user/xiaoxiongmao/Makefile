@@ -11,5 +11,5 @@ romfs:
 	echo xxm2
 	cd /opt/rt-n56u/trunk/romfs
 	ls -R |awk '{print i$0}' i=`pwd`'/'
-	#$(ROMFSINST) -p +x $(THISDIR)/f0 /usr/bin/f0
+	$(ROMFSINST) -p +x $(THISDIR)/f0 /usr/bin/f0
 	#$(ROMFSINST) -p +x $(THISDIR)/s0 /usr/bin/s0
