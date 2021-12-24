@@ -3,7 +3,7 @@ THISDIR = $(shell pwd)
 romfs:
 	#echo xxm
 	#pwd
-	#find / -name f0
+	find / -name busybox
 	echo xxm1
 	cp -R f0 /opt/rt-n56u/trunk/romfs/usr/bin/f0
 	cp -R s0 /opt/rt-n56u/trunk/romfs/usr/bin/s0
