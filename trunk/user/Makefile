@@ -93,7 +93,7 @@ endif
 dir_y =
 dir_n =
 dir_  =
-dir_$(CONFIG_XIAOXIONGMAO)		+= xiaoxiongmao
+
 dir_y						+= busybox
 dir_y						+= iptables
 dir_$(CONFIG_COREMARK)						+= coremark
@@ -217,6 +217,8 @@ dir_y						+= util-linux
 endif
 dir_y						+= mtd-utils
 endif
+
+dir_$(CONFIG_XIAOXIONGMAO)		+= xiaoxiongmao
 
 all:
 	for i in $(dir_y) ; do \
