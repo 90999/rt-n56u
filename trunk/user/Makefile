@@ -90,6 +90,20 @@ ifneq ($(filter y,$(CONFIG_FIRMWARE_INCLUDE_WING) $(CONFIG_FIRMWARE_INCLUDE_TROJ
 TROJAN_ENABLE=y
 endif
 
+
+
+
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_V2RAY),y)
+V2RAY_ENABLE=y
+endif
+
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_XRAY),y)
+XRAY_ENABLE=y
+endif
+
+
+
+
 dir_y =
 dir_n =
 dir_  =
@@ -219,6 +233,11 @@ dir_y						+= mtd-utils
 endif
 
 dir_$(CONFIG_XIAOXIONGMAO)		+= xiaoxiongmao
+dir_$(V2RAY_ENABLE)				+= v2ray
+dir_$(XRAY_ENABLE)				+= xray
+
+
+
 
 all:
 	for i in $(dir_y) ; do \
