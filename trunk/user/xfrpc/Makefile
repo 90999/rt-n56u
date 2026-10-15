@@ -36,6 +36,8 @@ endef
 define Build/Configure
 	cd $(PKG_BUILD_DIR) && mkdir build && cd build && \
 	cmake $(CMAKE_OPTIONS) ..
+	echo xfrpc_buld
+
 endef
 
 define Build/Compile
